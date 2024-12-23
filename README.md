@@ -1,6 +1,6 @@
 
 
-Task 1: Performance Analysis of C Code Compilation**
+Task 1: Performance Analysis of C Code Compilation
 
 This task involved analyzing the performance of a simple C program (sum1ton.c) that calculates the sum of numbers from 1 to n. The analysis focused on comparing the code size and potential performance when compiled with different optimization levels using the RISC-V compiler.
 
