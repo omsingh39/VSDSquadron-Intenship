@@ -17,5 +17,21 @@ Lab 2:
 * The process was repeated with optimization level "Ofast" to observe the impact of optimization on the number of instructions.
 * The results, including assembly code snippets and instruction counts, are documented in files starting with "Lab 2."
 
+Task 2:
+Lab 3 :
+
+The assembly language program for the file `sum1ton.o` was analyzed. The corresponding C code was compiled using both the GCC and RISC-V compilers, producing identical outputs. The Spike simulator was employed to execute the RISC-V compiled program. 
+
+
+1. Object Dump Analysis:
+   - Assembly code was extracted, and the Spike debugger was used to progress the program counter to memory address `100b0`. Subsequent instructions were executed manually.  
+
+2. Register Behavior: 
+   - Register `a2`:  
+     Observed before and after modifications by the `lui` instruction, which loads the upper immediate bits (12-31) into the register.  
+   - Register `a0`:  
+     The `addi` instruction was used to perform hexadecimal addition on the value stored in the register.  
+
+
 
 
