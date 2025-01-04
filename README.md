@@ -86,6 +86,26 @@ imm[11] (1 bit): Jump target address.
 imm[19:20] (2 bits): Jump target address.
 imm[10:1] (10 bits): Jump target address.
 
+Unique RISC-V Instructions Identified :
+Based on the analysis of the assembly code, I identified the following unique RISC-V instructions:
+
+1.	addi
+2.	sd
+3.	li
+4.	jal
+5.	ld
+6.	ret
+7.	mv
+8.	beqz
+9.	jalr
+10.	jr
+11.	bltz
+12.	neg
+13.	sll
+14.	and
+15.	sub
+
+
 Example: Decoding "addi x3, x1, 5"
 
 opcode (7 bits): 0010011 (I-type opcode for addi)
