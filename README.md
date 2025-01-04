@@ -32,8 +32,13 @@ The assembly language program for the file `sum1ton.o` was analyzed. The corresp
    - Register `a0`:  
      The `addi` instruction was used to perform hexadecimal addition on the value stored in the register.
 
+
 Task 3:
+
 ![image](https://github.com/user-attachments/assets/26aab526-da87-4cc2-bda4-5976b1ddb326)
+
+
+
 RISC-V instructions are typically represented using different instruction formats, each with a specific field layout:
 
 R-type: For register-to-register operations (e.g., add, sub, and, or, xor)
@@ -82,6 +87,7 @@ imm[19:20] (2 bits): Jump target address.
 imm[10:1] (10 bits): Jump target address.
 
 Example: Decoding "addi x3, x1, 5"
+
 opcode (7 bits): 0010011 (I-type opcode for addi)
 rd (5 bits): 00011 (register x3)
 funct3 (3 bits): 000 (for addi)
