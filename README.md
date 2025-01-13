@@ -115,6 +115,65 @@ rs1 (5 bits): 00001 (register x1)
 imm[11:0] (12 bits): 000000000101 (decimal 5)
 This instruction adds the immediate value 5 to the value in register x1 and stores the result in register x3.
 
+Task 4:
+5-Stage RISC Pipeline Implementation and Simulation
+
+This report discusses the implementation of a 5-stage RISC pipeline using Verilog. The design simulates a basic RISC processor architecture comprising instruction fetch, decode, execution, memory access, and write-back stages. The simulation is carried out using Icarus Verilog (Iverilog) and GTKWave, which provide a comprehensive environment for digital design verification.
+
+---
+
+Pipeline Stages
+
+1. Instruction Fetch (IF):
+   - Fetches the instruction from memory.
+   - Computes the next program counter (NPC).
+   - Key Signals: `IF_ID_IR` (Instruction Register), `IF_ID_NPC` (Next Program Counter).
+
+2. Instruction Decode (ID):
+   - Decodes the instruction to identify the operation and operands.
+   - Reads register values.
+   - Key Signals: `ID_EX_A` (Source Register), `ID_EX_B` (Destination Register), `ID_EX_IMMEDIATE` (Immediate Value), `ID_EX_IR` (Instruction Register).
+
+3. Execute (EX):
+   - Executes the operation using the ALU.
+   - Produces outputs such as `EX_MEM_ALUOUT` (ALU Result) and `EX_MEM_IR` (Instruction Details).
+
+4. Memory Access (MEM):
+   - Handles memory-related instructions (loads/stores).
+   - Key Signals: `MEM_WB_ALUOUT` (ALU Result for Memory), `MEM_WB_LDM` (Loaded Data from Memory).
+
+5. Write Back (WB):
+   - Writes the results back to the register file.
+   - Key Signal: `WB_OUT` (Write-Back Output).
+
+---
+
+Design Implementation
+- The Verilog code defines a parameterized RISC pipeline.
+- Registers and memories (`REG` and `MEM`) are initialized for operations.
+- The design supports arithmetic (ADD, SUB), logical (AND, OR), memory operations (LW, SW), branching (BEQ, BNE), and shifting (SLL, SRL).
+- Control signals such as `EX_MEM_COND` and `BR_EN` handle branching logic.
+
+---
+
+Testbench
+- The testbench initializes the pipeline with a clock (`clk`) and reset (`RN`) signals.
+- A `.vcd` file (`iiitb_rv32i.vcd`) is generated to record the simulation results.
+- Key simulation commands include:
+  - `initial begin` to initialize variables.
+  - `always #3 clk = !clk` for generating the clock.
+  - `$dumpfile` and `$dumpvars` for simulation output.
+  - `$finish` to terminate the simulation.
+
+---
+
+Simulation and Debugging
+- Iverilog compiles and simulates the Verilog code, generating a `.vcd` file.
+- GTKWave visualizes signal transitions and provides insights into the pipeline behavior.
+
+---
+
+The 5-stage RISC pipeline efficiently handles instruction execution through systematic stages, leveraging overlapping operations for higher throughput. The simulation and debugging process, facilitated by Iverilog and GTKWave, ensures correct functionality and performance validation of the design.
 
 
 
