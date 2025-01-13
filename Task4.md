@@ -351,7 +351,8 @@ A typical 5-stage RISC pipeline consists of the following sequential stages, eac
 Together, these stages form a systematic process for instruction execution, with each stage contributing to efficient and overlapping execution in the pipeline.
 
 ![task 4](https://github.com/user-attachments/assets/3d28fca6-b7cf-40c1-b53c-9616764129c1)
-![task 4](https://github.com/user-attachments/assets/30083b2c-41ce-414c-8782-09ca4822fab2)
+![task 4 ii](https://github.com/user-attachments/assets/14a331b2-5fa0-48fc-b6c7-09d23f8dad21)
+
 
 Testbench Code:
 
