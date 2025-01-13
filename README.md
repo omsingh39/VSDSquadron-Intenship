@@ -116,6 +116,7 @@ imm[11:0] (12 bits): 000000000101 (decimal 5)
 This instruction adds the immediate value 5 to the value in register x1 and stores the result in register x3.
 
 Task 4:
+
 5-Stage RISC Pipeline Implementation and Simulation
 
 This report discusses the implementation of a 5-stage RISC pipeline using Verilog. The design simulates a basic RISC processor architecture comprising instruction fetch, decode, execution, memory access, and write-back stages. The simulation is carried out using Icarus Verilog (Iverilog) and GTKWave, which provide a comprehensive environment for digital design verification.
